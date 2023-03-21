@@ -12,8 +12,8 @@ nav{
 }
 
 main{
-    /* display: grid;
-    grid-template-rows: 1fr 2fr 1fr; */
+    display: grid;
+    grid-template-rows: 5fr 1fr;
     padding: 0px 20px;
     order: 2;
     background-color: #F3E9DE;
@@ -23,14 +23,12 @@ main{
 /* title of main */
 h1{
     font-family: 'Montserrat', sans-serif;
-    /* font-size: 20px; */
     text-align: center;
     color: #256993;
 }
 
 .title p{
     font-family: 'Montserrat', sans-serif; 
-    /* font-size: 10px; */
     color: #256993;
     text-align: right;
 }
@@ -48,7 +46,6 @@ h1{
     border-radius: 10px;
     border: 1px solid #31555E;
     padding: 0px 12px;
-    /* font-size: 10px; */
 }
 
 .dark{
@@ -57,7 +54,6 @@ h1{
     border-radius: 10px;
     border: 1px solid #383645;
     padding: 0px 12px;
-    /* font-size: 10px; */
 }
 
 #textarea{
@@ -92,17 +88,33 @@ h1{
 }
 
 
+/* footer of main */
+h3{
+    color: #256993;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 /* nav bar */
 h2{
     font-family: 'Montserrat', sans-serif;
-    /* font-size: 17px; */
     text-align: center;
     color: #256993;
 }
 
 li{ 
     font-family: 'Montserrat', sans-serif; 
-    /* font-size: 10px; */
     color: #256993;
 }
 
