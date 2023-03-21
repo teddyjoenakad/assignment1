@@ -1,22 +1,38 @@
+/* main elements of website */
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
 
-
-main{
-    order: 2;
+nav{
+    order: 1;
     background-color: #FAF4EC;
 }
 
-
-nav{
-    order: 1;
+main{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding: 0px 20px;
+    order: 2;
     background-color: #F3E9DE;
 }
 
 
+/* title of main */
 h1{
+    text-align: center;
+    color: #256993;
+}
+
+.title p{
+    color: #256993;
+    text-align: right;
+}
+
+
+
+
+li{ 
     color: #256993;
 }
 
