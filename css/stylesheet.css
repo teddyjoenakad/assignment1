@@ -1,16 +1,37 @@
-/* main elements of website */
-body {
+@media screen and (min-width: 600px) {
+    body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     height: 100vh;
-    margin: 0px;
-}
+    margin: 0px;   
+    }
 
+    main{
+    height: 100vh;
+    margin: 0px;
+    }
+}   
+
+
+/* nav bar */
 nav{
     order: 1;
     background-color: #FAF4EC;
 }
 
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #256993;
+}
+
+li{ 
+    font-family: 'Montserrat', sans-serif; 
+    color: #256993;
+}
+
+
+/* Main */
 main{
     display: grid;
     grid-template-rows: 5fr 1fr;
@@ -106,15 +127,11 @@ footer{
     flex-direction: row;
 }
 
-/* nav bar */
-h2{
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: #256993;
-}
 
-li{ 
-    font-family: 'Montserrat', sans-serif; 
-    color: #256993;
+/* Mobile view */
+body {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+    margin: 0px;
 }
-
