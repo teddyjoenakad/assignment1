@@ -1,0 +1,22 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+
+main{
+    order: 2;
+    background-color: #FAF4EC;
+}
+
+
+nav{
+    order: 1;
+    background-color: #F3E9DE;
+}
+
+
+h1{
+    color: #256993;
+}
+
