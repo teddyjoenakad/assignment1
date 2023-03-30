@@ -7,6 +7,8 @@ const list = document.querySelectorAll('li');
 const textArea = document.querySelector('.textSaveCancel');
 const cancel = document.querySelector('.cancel');
 const newNote = document.querySelector('.note');
+const note = document.querySelector('#textarea');
+const save = document.querySelector('.save');
 // console.log(textarea.classList.add('hidden'));
 
 
@@ -43,4 +45,18 @@ let showArea = () => {
     textArea.classList.remove('hidden');
 }
 newNote.addEventListener('click', showArea);
+
+// Save Note
+let notesArray = {title:"note one", body:"this is my first note"}
+// notesArray.body = 'notes'
+// console.log(notesArray);
+let saveNote = () => {
+    let title = prompt('What is the title of your note?');
+    let body = note.value;
+    notesArray.title = title;
+    notesArray.body = body;
+    console.log(notesArray);
+}
+save.addEventListener('click', saveNote);
+
 
