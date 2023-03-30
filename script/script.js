@@ -4,13 +4,15 @@ const nav = document.querySelector('nav');
 const dark = document.querySelector('.dark');
 const h3 = document.querySelector('h3');
 const list = document.querySelectorAll('li');
-const textArea = document.querySelector('.textSaveCancel');
 const cancel = document.querySelector('.cancel');
 const newNote = document.querySelector('.note');
 const note = document.querySelector('#textarea');
+const cancelSave = document.querySelector('.lastbuttons');
 const save = document.querySelector('.save');
 const ul = document.querySelector('ul');
+const textArea = document.querySelector('.textArea');
 
+console.log(cancelSave)
 
 
 // dark theme
@@ -34,7 +36,7 @@ dark.addEventListener('click', changeBG);
 
 // Cancel Note
 let hideArea = () => {
-    textArea.classList.toggle('hidden');
+    textArea.classList.add('hidden');
     textArea.classList.remove('show');
 }
 cancel.addEventListener('click', hideArea);
@@ -60,7 +62,6 @@ let saveNote = () => {
     newLi.appendChild(document.createTextNode(newNote.title));
     ul.appendChild(newLi);
     notesArray.push(newNote);
-    console.log(notesArray);
 }
 save.addEventListener('click', saveNote);
 
@@ -69,7 +70,7 @@ save.addEventListener('click', saveNote);
 let navigateNotes = (event) => {
     for (let notes of notesArray) {
         if (event.target.textContent === notes.title) {
-            note.replaceChild(document.createTextNode(notes.body), note.childNodes[0]);
+            note.value = notes.body;
         }
     }
 };
