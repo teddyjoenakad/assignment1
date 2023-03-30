@@ -48,7 +48,7 @@ let showArea = () => {
 newNote.addEventListener('click', showArea);
 
 // Save Note
-let notesArray = [{title:"note one", body:"this is my first note"}]
+let notesArray = [{title:"note one", body:"this is my first note"},{title:"note two", body:"this is my second note"}]
 
 let saveNote = () => {
     let title = prompt('What is the title of your note?');
@@ -60,10 +60,17 @@ let saveNote = () => {
     newLi.appendChild(document.createTextNode(newNote.title));
     ul.appendChild(newLi);
     notesArray.push(newNote);
-    // console.log(notesArray);
+    console.log(notesArray);
 }
 save.addEventListener('click', saveNote);
 
 
-
-
+// Navigate through notes
+let navigateNotes = (event) => {
+    for (let notes of notesArray) {
+        if (event.target.textContent === notes.title) {
+            note.replaceChild(document.createTextNode(notes.body), note.childNodes[0]);
+        }
+    }
+};
+ul.addEventListener('click', navigateNotes);
