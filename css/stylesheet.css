@@ -17,17 +17,16 @@
 nav{
     order: 1;
     background-color: #FAF4EC;
+    color: #256993;
 }
 
 h2{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: #256993;
 }
 
 li{ 
     font-family: 'Montserrat', sans-serif; 
-    color: #256993;
 }
 
 
@@ -38,6 +37,7 @@ main{
     padding: 0px 20px;
     order: 2;
     background-color: #F3E9DE;
+    color: #256993;
 }
 
 
@@ -45,13 +45,12 @@ main{
 h1{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: #256993;
 }
 
-.title p{
+.title{
     font-family: 'Montserrat', sans-serif; 
-    color: #256993;
     text-align: right;
+    
 }
 
 
@@ -135,3 +134,17 @@ body {
     height: 100vh;
     margin: 0px;
 }
+
+
+/* dark mode */
+
+.darkMain{
+    background-color: #18122B;
+    color: #FFFBEB;
+}
+
+.darkNav{
+    background-color: #635985;
+    color: #FFFBEB;
+}
+
