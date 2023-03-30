@@ -11,7 +11,6 @@ const note = document.querySelector('#textarea');
 const save = document.querySelector('.save');
 const ul = document.querySelector('ul');
 
-// console.log(ul);
 
 
 // dark theme
@@ -49,17 +48,19 @@ let showArea = () => {
 newNote.addEventListener('click', showArea);
 
 // Save Note
-let notesArray = {title:"note one", body:"this is my first note"}
-// notesArray.body = 'notes'
-// console.log(notesArray);
+let notesArray = [{title:"note one", body:"this is my first note"}]
+
 let saveNote = () => {
     let title = prompt('What is the title of your note?');
-    let body = note.value;
-    notesArray.title = title;
-    notesArray.body = body;
+    let body = note.value.trim();
+    let newNote = {title:title, body:body};
+    newNote.title = title;
+    newNote.body = body;
     let newLi = document.createElement('li');
-    newLi.appendChild(document.createTextNode(notesArray.title));
+    newLi.appendChild(document.createTextNode(newNote.title));
     ul.appendChild(newLi);
+    notesArray.push(newNote);
+    // console.log(notesArray);
 }
 save.addEventListener('click', saveNote);
 
