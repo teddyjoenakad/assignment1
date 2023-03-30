@@ -9,7 +9,9 @@ const cancel = document.querySelector('.cancel');
 const newNote = document.querySelector('.note');
 const note = document.querySelector('#textarea');
 const save = document.querySelector('.save');
-// console.log(textarea.classList.add('hidden'));
+const ul = document.querySelector('ul');
+
+// console.log(ul);
 
 
 // dark theme
@@ -55,8 +57,12 @@ let saveNote = () => {
     let body = note.value;
     notesArray.title = title;
     notesArray.body = body;
-    console.log(notesArray);
+    let newLi = document.createElement('li');
+    newLi.appendChild(document.createTextNode(notesArray.title));
+    ul.appendChild(newLi);
 }
 save.addEventListener('click', saveNote);
+
+
 
 
